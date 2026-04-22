@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Solver</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Maze Solver</h1>
+        <div class="controls">
+            <div class="input-group-wrapper">
+                <div class="input-group">
+                    <label>Rows:</label>
+                    <input type="number" id="rows" value="15" min="2" max="50">
+                </div>
+                <div class="input-group">
+                    <label>Cols:</label>
+                    <input type="number" id="cols" value="20" min="2" max="50">
+                </div>
+            </div>
+            <div class="mode-group">
+                <button id="mode-wall" class="btn-mode active" onclick="setMode('wall')">Draw Walls</button>
+                <button id="mode-start" class="btn-mode" onclick="setMode('start')">Set Start (S)</button>
+                <button id="mode-end" class="btn-mode" onclick="setMode('end')">Set End (E)</button>
+            </div>
+            <div class="button-group">
+                <button class="btn-gen" onclick="initMaze()">Generate Grid</button>
+                <button class="btn-solve" onclick="solve()">Solve Path</button>
+                <button class="btn-reset" onclick="resetMaze()">Clear Walls</button>
+            </div>
+        </div>
+        <canvas id="mazeCanvas"></canvas>
+        <p class="hint">Click or drag to draw walls. Diagonals are allowed!</p>
+    </div> <script src="script.js"></script>
+</body>
+</html>

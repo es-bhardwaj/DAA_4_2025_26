@@ -1,0 +1,105 @@
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --danger: #dc3545;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    margin: 0;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    width: fit-content;
+    min-width: 500px;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #2d3436;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.input-group-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.mode-group, .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s, background-color 0.2s;
+    white-space: nowrap;
+}
+
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.96); }
+
+.btn-mode { background-color: #eee; color: #333; border: 1px solid #ccc; }
+.btn-mode.active { background-color: var(--secondary); color: white; border-color: transparent; }
+.btn-gen { background-color: #7f8c8d; }
+.btn-solve { background-color: var(--primary); }
+.btn-reset { background-color: var(--danger); }
+
+canvas {
+    border: 3px solid #2d3436;
+    background-color: white;
+    cursor: crosshair;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.hint {
+    color: #636e72;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin: 10px 0 0 0;
+}
