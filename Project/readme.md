@@ -19,7 +19,7 @@ A pathfinding tool demonstrating **Dijkstra's Algorithm** through a C++ referenc
 
 ## Complexity Analysis
 Based on the implementation in maze-solver.cpp and the visualizer:
-* **Time Complexity**: O((V + E) / log V) <br>
+* **Time Complexity**: O((V + E) log V) <br>
 V is the number of vertices (cells in the grid). <br>
 E is the number of edges (possible moves to neighbors). <br>
 The log V factor comes from the Min-Heap (Priority Queue) operations used to extract the minimum distance node.
