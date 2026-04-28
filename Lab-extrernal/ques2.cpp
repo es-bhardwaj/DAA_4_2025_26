@@ -16,9 +16,3 @@ int lcs(string s1,string s2){
     return dp[n][m];
 }
 
-int main(){
-    string s1,s2;
-    cin>>s1>>s2;
-    cout<<lcs(s1,s2);
-    return 0;
-}
