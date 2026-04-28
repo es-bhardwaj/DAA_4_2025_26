@@ -43,6 +43,15 @@ public:
     bool isEmpty() {
         return top == NULL;
     }
+
+void display() {
+        Node* temp = top;
+        while (temp != NULL) {
+            cout << temp->data << " -> ";
+            temp = temp->next;
+        }
+        cout << "NULL\n";
+    }
 };
 
 int main() {
